@@ -101,7 +101,7 @@ MOBIL
          font-family: "open-sans", arial, helvetica, sans-serif;
          font-size: 16px;
    }
-        /* .topnav a:hover {  Change the color of links on hover
+         .topnav a:hover {  /*Change the color of links on hover*/
            background-color: #F4E4D6;
            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
          }
@@ -109,7 +109,7 @@ MOBIL
          .topnav a:hover:not(.active) {
            background-color: #F4E4D6;
            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-         }*/
+         }
 
          .topnav a.active { /* Add an active class to highlight the current page */
          background-color: #ffffff;
@@ -323,7 +323,7 @@ MOBIL
 @media only screen and (max-width: 600px) { /* If the screen is smaller than 600px*/
       .topnav a:not(:first-child) {display: none;}
   #logo { /* Mobile version of the logo */
-  margin-right: 20px;
+  m
 }
 
 .topnav { /* Child of "flex-container-header" */
@@ -332,18 +332,24 @@ padding: 0px;
 }
   .topnav a { /* Style the links inside the navigation bar */
     width: auto;
-    margin: 3px 0px 3px 3px;
+    margin: 3px 0px 3px 13px;
     color: #000000;
   }
     .topnav a:hover { /* Change the color of links on hover */
-      background-color: red;
-      color: black;
+
     }
     .topnav a.active { /* Add an active class to highlight the current page */
     }
     .topnav a.icon {   /* Hides all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
       float: right;
       display: block;
+      margin: 3px 13px 3px 0px;
+      height: 46px;
+      width: 64px;
+      font-size: 17px;
+      background-color: #F4E4D6;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     }
 
 
