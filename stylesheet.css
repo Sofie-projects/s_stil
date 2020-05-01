@@ -1,0 +1,367 @@
+/* SAKER SOM INTE FUNGERAR JUST NU:
+-
+
+FRÅGETECKEN KRING DESIGNEN:
+- HAMBURGERMENY ELLER EJ?
+- TECKENSNITT?
+- GÖR SIDAN MER LEVANDE
+- FOOTER I LAPTOP-VERSIONEN
+ */
+html{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  max-width: 100%;
+}
+body {
+  background-color: #ffffff;
+  color: #000000;
+  margin: 5px 0px;
+  padding: 0px;
+  width: 100%;
+  max-width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+
+.flex-container-header { /* Parent of logo and menu */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+  .flex-container-header a {
+  }
+
+#logo { /* Mobile version of the logo */
+  display: flex;
+  float: left;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-right: 20px;
+}
+#hamburger_dropdown { /* dropdown-menu for mobile version */
+  float: left;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  display: inline-block;
+  background-color: #ffffff;
+  width: 78px;
+  height: 78px;
+  margin: 60px 0px 0px 20px;
+  align-items: flex-start;
+}
+
+ul.menu { /* dropdown-content */
+/*list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #ffffff;
+
+min-width: 160px;
+ */
+list-style-type: none;
+display: none;
+position: absolute;
+background-color: #ffffff;
+
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+padding: 12px 16px;
+z-index: 1;
+}
+ul.menu li {
+  float: none;
+}
+ul.menu li a {
+display: block;
+color: #000000;
+text-align: center;
+padding: 14px 16px; /* Kolla av den här paddingen */
+text-decoration: none;
+font-family: "open-sans", arial, helvetica, sans-serif;
+font-size: 16px;
+
+
+}
+#hamburger_dropdown:hover ul.menu{
+  display: block;
+}  /* .dropdown:hover .dropdown-content
+ul.menu li a:hover:not(.active) The HOVER for the menu, be there? Color? */
+
+ul.menu li a.active {background-color: #ead8c8 ;} /* #F4E4D6 color changed on the active page from the menu*/
+
+#pic1 {
+  width: 100%;
+  height: auto;
+  /*margin-bottom: 10px;*/
+}
+
+.flex-container-index-body { /* Nude box */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background-color: #ead8c8; /* #F4E6D6; */
+  display: flex;
+  float: left;
+  flex-direction: column;
+  padding: 0px 40px 0px 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  .flex-container-index-body h1, h2, h5, p {
+
+    margin: 10px 0px 0px 0px;
+  }
+  .flex-container-index-body p {
+
+    margin: 10px 0px 20px 0px;
+  }
+
+h1 {
+  color: #000000;
+  font-family: "open-sans", arial, helvetica, sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  }
+h2 {
+  font-family: "open-sans", arial, helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+h4 {
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "open-sans", arial, helvetica, sans-serif;
+  margin: 0px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+h5 {
+  font-family: "open-sans", arial, helvetica, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+}
+p {
+  font-family: "open-sans", arial, helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.flex-container-footer { /* Parent of h1, contact-us and contacts */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  display: flex;
+  /*float: none;*/
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 40px 0px 40px;
+}
+  .flex-container-footer-h1 { /* Child of "flex-container-footer" */
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+    .flex-container-footer h5 {
+      padding: 0px;
+      margin: 5px 5px 0px 5px;
+      font-size: 12px;
+    }
+    .flex-container-footer p {
+      padding: 0px;
+      margin: 5px 0px 10px 0px;
+      font-size: 11px;
+    }
+
+  .flex-contact-us { /* Parent of opening hours and button; Child of "flex-container-footer" */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .flex-opening-hours { /* Child 2 of "flex-contact-us" */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+  }
+  .button-book-online {
+    justify-content: flex-start;
+  }
+  .button { /* ONLINE BOOKING BUTTON: child 1 of "flex-contact-us"*/
+    background-color: #ead8c8; /*#F4E6D6;  Nude */
+    font: "open-sans", arial, helvetica, sans-serif;
+    border: none;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    display: block;
+    text-transform: uppercase;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Shadow behind button */
+
+  }
+  .button a:hover:not(.active) {background-color: #111;}  /*The HOVER for the menu, be there? Color? */
+
+    .flex-contacts { /* Child of "flex-container-footer" */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      max-width: 100%;
+      padding-top: 15px;
+    }
+    .flex-contacts p {
+      text-align: center;
+      margin: 0px;
+      /*padding: 0px;*/
+    }
+    .flex-contacts h5 {
+      text-align: center;
+    }
+
+
+/* LAPTOP */
+@media only screen and (min-width: 600px) { /* If the screen is bigger than 600px*/
+  body {
+  }
+
+  .flex-container-header { /* Parent of logo and menu */
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*margin: 15px 0px;*/
+  padding-top: 15px;
+  padding-bottom: 5px;
+
+
+  }
+  .flex-container-header a {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #logo {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    margin-right: 0px;
+    justify-content: center;
+  }
+  #hamburger_dropdown {
+    display: none;
+  }
+
+    ul.menu { /* Child of "flex-container-header" */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    background-color: #ead8c8;/* #F4E4D6; */
+    padding: 0px 80px 0px 80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    margin: 0px;
+    overflow: hidden;
+    }
+      ul.menu li {
+        width: 20%;
+      }
+      ul.menu li a {
+        text-transform: uppercase;
+
+        text-align: center;
+      }
+        ul.menu li a:hover:not(.active) {background-color: #F4E4D6;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);} /* CHANGE COLOR*/
+        ul.menu li a.active {background-color: #ffffff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+
+  .flex-container-index-body { /* Nude box */
+    padding: 0px 100px 0px 100px;
+  }
+  .flex-container-index-body p { /* Nude box */
+    margin: 1px 0px 10px 0px;
+  }
+  .flex-container-index-body h4 { /* Nude box */
+    padding: 5px 0px 5px 0px;
+  }
+  .flex-container-footer { /* PARENT OF "flex-container-footer-h1", "flex-opening-hours" and "flex-parent-column" */
+    flex-direction: column;
+  }
+    .flex-container-footer-h1 { /* Child of "flex-container-footer" */
+      text-align: left;
+      padding: 0px 60px 0px 60px;
+    }
+    .flex-opening-hours { /* Child of "flex-container-footer"; Parent of "flex-opening-hours-monday" +4 */
+      text-align: left;
+      float: left;
+      flex-direction: row;
+      padding: 0px 60px 0px 60px;
+    }
+    .flex-opening-hours h4 {
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-family: "open-sans", arial, helvetica, sans-serif;
+      margin: 0px;
+      font-weight: lighter;
+      letter-spacing: 1px;
+    }
+    .flex-opening-hours h5 {
+      margin: 0px;
+      padding: 0px 0px 3px 0px;
+      letter-spacing: 1px;
+    }
+    .flex-opening-hours p {
+      margin: 0px;
+      padding: 0px;
+    }
+      .flex-opening-hours-monday, .flex-opening-hours-tuesday, .flex-opening-hours-wednesday, .flex-opening-hours-thursday, .flex-opening-hours-friday {/* Child of "flex-opening-hours" */
+      float: left;
+      width: 20%;
+      padding: 0px;
+      margin: 0px;
+      }
+
+  .flex-parent-column { /* Child of "flex-container-footer"; Parent of "button-book-online" and "flex-contacts" */
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      padding: 0px 60px 0px 60px;
+  }
+    .button-book-online { /* Child of "flex-parent-column"; includes the button */
+      justify-content: center;
+      display: flex;
+    }
+    .button { /* ONLINE BOOKING BUTTON; Child of "button-book-online"*/
+      margin: 35px 0px 0px 0px;
+      width: 30%;
+    }
+    .flex-contacts { /* Child of "flex-parent-cloumn" */
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    .flex-contacts p {
+      padding: 0px;
+    }
+  }
