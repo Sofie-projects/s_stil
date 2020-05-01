@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" type="text/css" href="stylesheet.css">
+    <script src="myScript.js"></script>
+    <title>Salong stil</title>
+  </head>
+  <body>
+
+    <div class="flex-container-header"> <!-- FLEX-CONTAINER HEADER -->
+
+      <a href="http://www.salongstiledsbyn.se">
+        <img id="logo" src="collage_object.png" alt="Här visas Salong stils logga" width="auto" height="auto"> <!--child 1-->
+      </a>
+
+      <div class="topnav" id="myTopnav"><!-- TOPNAV: child 2-6 NAVIGATION BAR-->
+        <a class="active" href="http://www.salongstiledsbyn.se">Startsida</a> <!-- marks the active page -->
+        <a href="http://www.salongstiledsbyn.se">Priser</a>
+        <a href="http://www.salongstiledsbyn.se">Boka tid</a>
+        <a href="http://www.salongstiledsbyn.se">Hitta hit</a>
+        <a href="http://www.salongstiledsbyn.se">Om oss</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+      </div>
+    </div>
+
+    <img id="pic1" src="picL2.jpg" alt="Picture of" width="auto" height="auto"> <!--Picture of EXAMPLE-->
+
+    <div class="flex-container-index-body"> <!-- FLEX-CONTAINER: BODY ON FRONT PAGE -->
+      <h1>Välkommen till Salong Stil</h1>
+      <h4>Din frisör i Edsbyn</h4>
+      <p>Vi sätter vård och kvalité i första hand och friserar lika ofta tjejer som killar. Hos oss kan du klippa, färga, sätt upp, förtjocka och förlänga ditt hår. Vi hjälper dig också med färgning och formning av fransar och ögonbryn.</p>
+      <p>TEST</p>
+      <p>TEST</p>
+      <p>TEST</p>
+      <br>
+      <br>
+      <p>TEST</p>
+      <!-- INSTAGRAM-FLÖDE -->
+
+    </div>
+
+    <div class="flex-container-footer">      <!-- PARENT OF "flex-container-footer-h1", "flex-opening-hours" and "flex-parent-column"-->
+      <div class="flex-container-footer-h1"> <!-- Child of "flex-container-footer" -->
+        <h1>Kom i kontakt med oss</h1>
+        <h4>Våra öppettider</h4>
+      </div>
+
+      <div class="flex-opening-hours"> <!-- Child of "flex-container-footer"; Parent of "flex-opening-hours-monday" +4 -->
+
+
+          <div class="flex-opening-hours-monday"> <!-- Child of "flex-opening-hours" -->
+            <h5>Måndag</h5> <p>09.00-18.00</p>
+          </div>
+          <div class="flex-opening-hours-tuesday"> <!-- Child of "flex-opening-hours" -->
+            <h5>Tisdag</h5> <p>09.00-18.00</p>
+          </div>
+          <div class="flex-opening-hours-wednesday"> <!-- Child of "flex-opening-hours" -->
+            <h5>Onsdag</h5> <p>09.00-18.00</p>
+          </div>
+          <div class="flex-opening-hours-thursday"> <!-- Child of "flex-opening-hours" -->
+            <h5>Torsdag</h5> <p>09.00-18.00</p>
+          </div>
+          <div class="flex-opening-hours-friday"> <!-- Child of "flex-opening-hours" -->
+            <h5>Fredag</h5> <p>09.00-17.00</p>
+          </div>
+
+      </div>
+
+
+      <div class="flex-parent-column"> <!-- Child of "flex-container-footer"; Parent of "button-book-online" and "flex-contacts" -->
+
+          <div class="button-book-online">  <!-- Child of "flex-parent-cloumn" -->
+            <a href="https://www.bokadirekt.se/places/salong-stil-edsbyn-22742" class="button">Boka tid online</a>
+          </div>
+
+        <div class="flex-contacts"> <!-- Child of "flex-parent-cloumn" -->
+          <p>Gamla Faluvägen 1, Centrumhuset</p>
+          <h5>0271-20143</h5>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
