@@ -2,15 +2,13 @@
 -
 
 FRÅGETECKEN KRING DESIGNEN:
-- HAMBURGERMENY ELLER EJ?
 - TECKENSNITT?
 - GÖR SIDAN MER LEVANDE
-- FOOTER I LAPTOP-VERSIONEN
 
 LAPTOP
 * Header                                        - ok
 * Meny                                          - EJ KLART
-    - hamnar på två rader vid mindre skärm
+    - hamnar på två rader vid mindre skärm; NO WRAP?
 * Bild                                          - ok
 * Nude-box                                      - ok
 * Instagram i nude-box                          - EJ KLART
@@ -18,15 +16,12 @@ LAPTOP
 
 MOBIL
 * Header                                        - ok
-* Meny                                          - EJ KLART
-    - Ändra active?
-    - Var är hamburgaren?
+* Meny                                          - ok
 * Bild                                          - ok
 * Nude-box                                      - ok
 * Instagram i nude-box                          - EJ KLART
 * Footer                                        - ok
-* Övrigt:
-    - Minimum width funkar inte
+
 
  */
  /* LAPTOP-VERSION */
@@ -82,27 +77,30 @@ MOBIL
      width: 100%;
      max-width: 100%;
      background-color: #ead8c8;
-     padding: 0px 80px 0px 80px;
+     padding: 0px 40px 0px 40px;
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
      position: relative;
      margin: 0px;
      overflow: hidden;
+     justify-content: space-around;
      }
 
        .topnav a { /* Style the links inside the navigation bar */
+         display: flex;
+         flex-wrap: nowrap;
          text-transform: uppercase;
-         width: 20%;
-         text-align: center;
          float: left;
          display: block;
-         padding: 14px 16px;
+         padding: 14px 12px;
          text-decoration: none;
          color: #000000;
          font-family: "open-sans", arial, helvetica, sans-serif;
-         font-size: 16px;
+
+         margin: 3px 0px 3px 0px;
    }
          .topnav a:hover {  /*Change the color of links on hover*/
            background-color: #F4E4D6;
+           padding: 14px 16px;
            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
          }
 
@@ -222,13 +220,6 @@ MOBIL
        font-size: 11px;
      }
 
-/*   .flex-contact-us { Parent of opening hours and button; Child of "flex-container-footer"
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-     width: 100%;
-     max-width: 100%;
-   }*/
 
      .flex-opening-hours { /* Child of "flex-container-footer"; Parent of "flex-opening-hours-monday" +4 */
        display: flex;
@@ -283,7 +274,7 @@ MOBIL
 
      .button { /* ONLINE BOOKING BUTTON; Child of "button-book-online"*/
        margin: 35px 0px 0px 0px;
-       width: 30%;
+       width: 45%;
        background-color: #ead8c8; /*#F4E6D6;  Nude */
        font: "open-sans", arial, helvetica, sans-serif;
        border: none;
@@ -336,17 +327,17 @@ padding: 0px;
     color: #000000;
   }
     .topnav a:hover { /* Change the color of links on hover */
-
+      margin-right: 8px;
     }
     .topnav a.active { /* Add an active class to highlight the current page */
+      margin-right: 8px;
     }
     .topnav a.icon {   /* Hides all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
       float: right;
       display: block;
-      margin: 3px 13px 3px 0px;
-      height: 46px;
-      width: 64px;
-      font-size: 17px;
+      margin: 3px 13px 5px 0px;
+      height: auto;
+      width: auto;
       background-color: #F4E4D6;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -365,6 +356,7 @@ padding: 0px;
         display: block;
         text-align: left;
       }
+
 
 #pic1 {
 }
