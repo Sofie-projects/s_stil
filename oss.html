@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="myScript.js"></script>
+    <title>Salong stil</title>
+  </head>
+  <body>
+
+    <div class="flex-container-header"> <!-- FLEX-CONTAINER HEADER -->
+
+      <a href="http://www.salongstiledsbyn.se">
+        <img id="logo" src="collage_object.png" alt="Här visas Salong stils logga" width="auto" height="auto"> <!--child 1-->
+      </a>
+
+      <div class="topnav" id="myTopnav"><!-- TOPNAV: child 2-6 NAVIGATION BAR-->
+        <a href="index.html">Startsida</a>
+        <a href="priser.html">Priser</a>
+        <a href="https://www.bokadirekt.se/places/salong-stil-edsbyn-22742">Boka tid</a>
+        <a href="aktuellt.html">Aktuellt</a>
+        <a class="active" href="oss.html">Om oss</a><!-- marks the active page -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i></a>
+      </div>
+    </div>
+
+    <img id="pic3" src="picL6.jpg" alt="Picture of" width="auto" height="auto"> <!--Picture of EXAMPLE-->
+
+    <div class="flex-container-index-body"> <!-- FLEX-CONTAINER: BODY ON FRONT PAGE AND OSS.HTML -->
+      <h1>Vi som arbetar på Salong Stil</h1>
+      <h4>Frisör 1</h4>
+      <p>Presentation av frisör  1</p>
+      <br>
+      <h4>Frisör 2</h4>
+      <p>Presentation av frisör  2</p>
+    </div>
+
+    <!-- BILDGALLERI -->
+    <div class="bildgalleri">
+      <img id="pic4" src="picS5.jpg" alt="Picture of" width="auto" height="auto"> <!--Picture of EXAMPLE-->
+    </div>
+    <div class="bildgalleri">
+      <img id="pic5" src="picS7.jpg" alt="Picture of" width="auto" height="auto"> <!--Picture of EXAMPLE-->
+    </div>
+    <div class="bildgalleri">
+      <img id="pic6" src="picS8.jpg" alt="Picture of" width="auto" height="auto"> <!--Picture of EXAMPLE-->
+    </div>
+    <!-- SLUT PÅ BILDGALLERI -->
+
+    <div class="flex-container-footer">      <!-- PARENT OF "flex-container-footer-h1", "flex-opening-hours" and "flex-parent-column"-->
+      <div class="flex-container-footer-h1"> <!-- Child of "flex-container-footer" -->
+        <h1>Kom i kontakt med oss</h1>
+        <h4>Våra öppettider</h4>
+      </div>
+
+      <div class="flex-opening-hours"> <!-- Child of "flex-container-footer"; Parent of "flex-opening-hours-monday" +4 -->
+
+
+          <div class="flex-opening-hours-monday"> <!-- Child of "flex-opening-hours" -->
+            <h5>Måndag</h5> <p>09.00-18.00</p>
+          </div>
+          <div class="flex-opening-hours-tuesday"> <!-- Child of "flex-opening-hours" -->
+            <h5>Tisdag</h5> <p>09.00-18.00</p>
+          </div>
+          <div class="flex-opening-hours-wednesday"> <!-- Child of "flex-opening-hours" -->
+            <h5>Onsdag</h5> <p>09.00-18.00</p>
+          </div>
+          <div class="flex-opening-hours-thursday"> <!-- Child of "flex-opening-hours" -->
+            <h5>Torsdag</h5> <p>09.00-18.00</p>
+          </div>
+          <div class="flex-opening-hours-friday"> <!-- Child of "flex-opening-hours" -->
+            <h5>Fredag</h5> <p>09.00-17.00</p>
+          </div>
+
+      </div>
+
+
+      <div class="flex-parent-column"> <!-- Child of "flex-container-footer"; Parent of "button-book-online" and "flex-contacts" -->
+
+          <div class="button-book-online">  <!-- Child of "flex-parent-cloumn" -->
+            <a href="https://www.bokadirekt.se/places/salong-stil-edsbyn-22742" class="button">Boka tid online</a>
+          </div>
+
+        <div class="flex-contacts"> <!-- Child of "flex-parent-cloumn" -->
+          <p>Gamla Faluvägen 1, Centrumhuset</p>
+          <h5>0271-20143</h5>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
