@@ -122,11 +122,13 @@ MOBIL
 /* SLUT PÅ MENYN: NAVIGATION BAR */
 
 
- #pic1 {
+/* START BILDER */
+ #pic1, #pic2, #pic3, #pic4, #pic5, #pic6 {                      /* Bilder  */
    width: 100%;
    height: auto;
-   /*margin-bottom: 10px;*/
+   padding: 15px 6px;
  }
+ /* SLUT BILDER */
 
 /* START NUDE-BOX */
    .flex-container-index-body { /* Nude box */
@@ -153,6 +155,7 @@ MOBIL
      padding: 5px 0px 5px 0px;
    }
 /* SLUT PÅ NUDE-BOX */
+
 
 /* ALLMÄNNA BESTÄMMELSER */
  h1 {
@@ -209,7 +212,6 @@ MOBIL
    flex-direction: column;
    justify-content: center;
    padding: 0px 40px 0px 40px;
-
  }
      .flex-container-footer-h1 { /* Child of "flex-container-footer" */
        text-align: left;
@@ -228,8 +230,6 @@ MOBIL
        margin: 5px 0px 10px 0px;
        font-size: 11px;
      }
-
-
      .flex-opening-hours { /* Child of "flex-container-footer"; Parent of "flex-opening-hours-monday" +4 */
        display: flex;
        text-align: left;
@@ -240,7 +240,6 @@ MOBIL
        justify-content: center; /* ??? */
        width: 100%;
      }
-
      .flex-opening-hours h4 {
        padding-bottom: 10px;
        text-transform: uppercase;
@@ -265,7 +264,6 @@ MOBIL
        padding: 0px;
        margin: 0px;
        }
-
    .flex-parent-column { /* Child of "flex-container-footer"; Parent of "button-book-online" and "flex-contacts" */
        flex-direction: column;
        text-align: center;
@@ -273,13 +271,13 @@ MOBIL
        padding: 0px 60px 0px 60px;
    }
 
+   /* START BUTTON */
      .button-book-online { /* Child of "flex-parent-column"; includes the button */
        justify-content: center;
        display: flex;
        justify-content: center;
        align-items: center;
      }
-
      .button { /* ONLINE BOOKING BUTTON; Child of "button-book-online"*/
        margin: 35px 0px 0px 0px;
        width: 45%;
@@ -298,6 +296,8 @@ MOBIL
    }
 
    /*.button a:hover:not(.active) {background-color: #111;}  The HOVER for the menu, be there? Color? */
+
+/* SLUT BUTTON */
 
      .flex-contacts { /* Child of "flex-parent-cloumn" */
        display: flex;
@@ -358,6 +358,7 @@ justify-content: center;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
 /* SLUT PÅ MENYN PÅ SIDAN PRISER */
+
 /* BÖRJAN PÅ RANDIG INFORMATION */
     .klippning {
       display: flex;
@@ -369,7 +370,6 @@ justify-content: center;
       width: 85%;
       margin: 0px 0px 10px 0px;
     }
-
       .klippning h3 {
         text-transform: uppercase;
         font-size: 2em;
@@ -556,12 +556,76 @@ justify-content: center;
 /* SLUT PÅ RANDIG INFORMATION */
 /* SLUT PÅ HUVUDBOXEN PÅ SIDAN PRISER */
 
+/* START PÅ HUVUDBOX PÅ SIDAN "AKTUELLT" */
+.ljusRandAktuellt { /* Rand 2 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #F4E6D6; /*  #ead8c8 */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  height: auto;
+  width: 85%;
+  margin: 0px 0px 10px 0px;
+  padding: 14px 16px;
+}
+.randAktuelltHeadline {
+  display: flex;
+  flex-direction: column;
+}
+.darkRandAktuellt { /* Rand 1 och 3 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #ead8c8; /* #F4E6D6 */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  height: auto;
+  width: 85%;
+  margin: 0px 0px 10px 0px;
+  padding: 14px 16px;
+}
+.randAktuelltLeft { /* Den vänstra kolumnen i ränderna på sidan "Aktuellt" */
+  display: flex;
+  flex-direction: column;
+  float: left;
+  width: 75%;
+}
+.randAktuelltRight { /* Den högra kolumnen i ränderna på sidan "Aktuellt" */
+  display: flex;
+  float: right;
+  width: 25%;
+  height: auto;
+}
+.darkRandAktuellt h3, .ljusRandAktuellt h3 {
+  text-transform: uppercase;
+  font-size: 2em;
+  font-style: "open-sans", arial, helvetica, sans-serif;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin: 10px 0px;
+}
+.randAktuelltContainer { /* Box i boxen, CHILD to "ljusRandAktuellt", PARENT to "randAktuelltLeft" and "randAktuelltRight" */
+display: flex;
+flex-direction: row;
+width: 100%;
+}
+.randAktuelltChild {
+  width: 100%;
+}
+/* SLUT PÅ HUVUDBOX PÅ SIDAN "AKTUELLT" */
+
+/* START PÅ BILDGALLERI */
+.bildgalleri {
+width: 33.33%;
+height: auto;
+float: left;
+}
+/* SLUT PÅ BILDGALLERI */
 
 /* MOBILE */
 @media only screen and (max-width: 600px) { /* If the screen is smaller than 600px*/
       .topnav a:not(:first-child) {display: none;}
   #logo { /* Mobile version of the logo */
-  m
+
 }
 
 .topnav { /* Child of "flex-container-header" */
@@ -610,6 +674,22 @@ padding: 0px;
 
 #pic1 {
 }
+
+/* SIDAN AKTUELLT */
+.randAktuelltContainer { /* Box i boxen, CHILD to "ljusRandAktuellt", PARENT to "randAktuelltLeft" and "randAktuelltRight" */
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+.randAktuelltLeft { /* Den vänstra kolumnen i ränderna på sidan "Aktuellt" */
+  width: 100%;
+}
+.randAktuelltRight { /* Den högra kolumnen i ränderna på sidan "Aktuellt" */
+  float: left;
+  width: 100%;
+}
+/* SLUT PÅ SIDAN AKTUELLT */
+
 .flex-container-index-body { /* Nude box */
   padding: 0px 40px 0px 40px;
 }
@@ -620,6 +700,16 @@ padding: 0px;
   }
   .flex-container-index-body h4 { /* Nude box */
   }
+
+/* START PÅ BILDGALLERI */
+  .bildgalleri {
+  width: 100%;
+  }
+/* SLUT PÅ BILDGALLERI */
+
+
+
+
 .flex-container-footer { /* Parent of h1 and "flex-opening-hours" */
 width: 100%;
 padding: 0px;
@@ -631,8 +721,6 @@ justify-content: center;
   text-align: center;
   }
 
-
-  /* DEN HÄR NEDANFÖR FUNKAR INTE RIKTIGT */
   .flex-opening-hours { /* Child 2 of "flex-container-footer" */
     display: flex;
     flex-direction: column;
