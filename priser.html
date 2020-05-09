@@ -14,20 +14,19 @@
     <div class="flex-container-header"> <!-- FLEX-CONTAINER HEADER -->
 
       <a href="http://www.salongstiledsbyn.se">
-        <img id="logo" src="collage_object.png" alt="Här visas Salong stils logga" width="auto" height="auto"> <!--child 1-->
+        <img id="logo" src="collage_object.png" alt="Här visas Salong stils logga"> <!--child 1-->
       </a>
 
       <div class="topnav" id="myTopnav"><!-- TOPNAV: child 2-6 NAVIGATION BAR-->
         <a href="index.html">Startsida</a>
         <a class="active" href="priser.html">Priser</a> <!-- marks the active page -->
-        <a href="https://www.bokadirekt.se/places/salong-stil-edsbyn-22742">Boka tid</a>
-        <a href="http://www.salongstiledsbyn.se">Aktuellt</a>
-        <a href="http://www.salongstiledsbyn.se">Om oss</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <a href="https://www.bokadirekt.se/places/salong-stil-edsbyn-22742" title="Öppnar länken till bokningssidan i ett nytt fönster" target="_blank">Boka tid</a>
+        <a href="aktuellt.html">Aktuellt</a>
+        <a href="oss.html">Om oss</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <!-- Länken till JS för den responsiva hamburger-menyn -->
           <i class="fa fa-bars"></i></a>
       </div>
     </div>
-    <!-- Header ovanför, ändra inget -->
 
   <!-- Huvudbox på sidan -->
   <div class="boxForBoxPrices">
@@ -38,10 +37,9 @@
       <a href="#coloring">Färg</a>
       <a href="#behandling">Behandling</a>
       <a href="#hairtalk">Hairtalk</a>
-      <a href="javascript:void(0);" class="iconSidenav" onclick="myFunction()">  <!-- Ny CLASS -->
-        <!--i class="fa fa-bars"></i--></a>
     </div>
     <!-- SIDMENYN OVANFÖR -->
+
 
     <!-- RANDIG INFORMATION NEDANFÖR -->
       <div class="klippning" id="klippning">
@@ -57,9 +55,10 @@
             <h6>Klippning 45 minuter - 550 kr</h6>
             <h6>Klippning 60 minuter - 720 kr</h6>
           </div>
-          <!-- Infoga streck -->
+          <!--  -->
           <div class="klippningRight">
-            <ul>Information om klippning
+            <ul>
+            <li>Information om klippning</li>
             <li>Vid färgning av utväxt är det max 3 cm. </li>
             <li>Observera att priserna är från-priser.</li>
             <li>A</li>
@@ -67,7 +66,6 @@
             </ul>
           </div>
         </div>
-
     <!-- SLUT PÅ KlIPPNING -->
 
     <div class="coloring" id="coloring">
@@ -87,11 +85,11 @@
         <h6>Färgning med flera färger, bayalage/slingor, 180 minuter - från 2300 kr</h6>
         <h6>Färgning med flera färger, bayalage/slingor, 210 minuter - från 2750 kr</h6>
         <h6>Färgning med flera färger, bayalage/slingor, 240 minuter - från 3000 kr</h6>
-
       </div>
-      <!-- Infoga streck -->
+      <!--  -->
       <div class="coloringRight">
-        <ul>Information om färgning
+        <ul>
+        <li>Information om färgning</li>
         <li>Vid färgning av utväxt är det max 3 cm. </li>
         <li>Observera att priserna är från-priser.</li>
         <li>A</li>
@@ -114,9 +112,10 @@
         <h6>Ögonbryn och ögonfransar - 450 kr</h6>
 
       </div>
-      <!-- Infoga streck -->
+      <!--  -->
       <div class="behandlingRight">
-        <ul>Information om behandlingar
+        <ul>
+        <li>Information om behandlingar</li>
         <li>Observera att priserna är från-priser.</li>
         <li>A</li>
         <li>B</li>
@@ -157,9 +156,10 @@
         <h6>För omsättning av hairtalk - från 1500 kr</h6>
 
       </div>
-      <!-- Infoga streck -->
+      <!--  -->
       <div class="hairtalkRight">
-        <ul>Information om hairtalk
+        <ul>
+        <li>Information om hairtalk</li>
         <li>Priserna avser full förlängning med 4 paket.</li>
         <li>A</li>
         <li>B</li>
@@ -170,22 +170,14 @@
 
   </div>
   <!-- Slut på huvudboxen -->
-<!--
-    <div class="flex-container-index-body">
-      <h1>Test</h1>
-    </div>
--->
+
     <div class="flex-container-footer">      <!-- PARENT OF "flex-container-footer-h1", "flex-opening-hours" and "flex-parent-column"-->
       <div class="flex-container-footer-h1"> <!-- Child of "flex-container-footer" -->
         <h1>Kom i kontakt med oss</h1>
         <h4>Våra öppettider</h4>
       </div>
 
-
-
-<!-- Footer nedanför, ändra inget -->
       <div class="flex-opening-hours"> <!-- Child of "flex-container-footer"; Parent of "flex-opening-hours-monday" +4 -->
-
 
           <div class="flex-opening-hours-monday"> <!-- Child of "flex-opening-hours" -->
             <h5>Måndag</h5> <p>09.00-18.00</p>
@@ -209,7 +201,7 @@
       <div class="flex-parent-column"> <!-- Child of "flex-container-footer"; Parent of "button-book-online" and "flex-contacts" -->
 
           <div class="button-book-online">  <!-- Child of "flex-parent-cloumn" -->
-            <a href="https://www.bokadirekt.se/places/salong-stil-edsbyn-22742" class="button">Boka tid online</a>
+            <a href="https://www.bokadirekt.se/places/salong-stil-edsbyn-22742" class="button" title="Öppnar länken till bokningssidan i ett nytt fönster" target="_blank">Boka tid online</a>
           </div>
 
         <div class="flex-contacts"> <!-- Child of "flex-parent-cloumn" -->
