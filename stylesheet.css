@@ -1,29 +1,28 @@
-/* SAKER SOM INTE FUNGERAR JUST NU:
-- ACCORDION
+/* INNEHÅLLSFÖRTECKNING ÖVER ORDNINGEN:
+GEMENSAMMA REGLER FÖR LAPTOP OCH MOBIL
+  - html, body, bilder, rubriker, p, ul osv.
 
-FRÅGETECKEN KRING DESIGNEN:
-- TECKENSNITT?
-- GÖR SIDAN MER LEVANDE
+LAPTOP-VERSION
+  - Header
+    - menyn: navigation bar
+  - Nude-box på startsidan
+  - Footer inkl. button
+  - Huvudbox på sidan "priser"
+    - menyn på sidan "priser"
+    - randiga textblock med information på sidan "priser"
+  - Huvudbox på sidan "aktuellt"
+  - Bildgalleri
 
-LAPTOP
-* Header                                        - ok
-* Meny                                          - ok
-* Bild                                          - ok
-* Nude-box                                      - ok
-* Instagram i nude-box                          - EJ KLART
-* Footer                                        - ok
+MOBIL-VERSION
+- MOBIL-ÄNDRINGAR HEADER
+- MOBIL-ÄNDRINGAR NAVIGATION BAR PÅ SIDAN "PRICES"
+- MOBIL-ÄNDRINGAR PÅ SIDAN "AKTUELLT"
+- MOBIL-ÄNDRINGAR FÖR NUDE BOX PÅ SIDAN "INDEX"
+- MOBIL-ÄNDRINGAR BILDGALLERI
+- MOBIL-ÄNDRINGAR FOOTER
+*/
 
-MOBIL
-* Header                                        - ok
-* Meny                                          - ok
-* Bild                                          - ok
-* Nude-box                                      - ok
-* Instagram i nude-box                          - EJ KLART
-* Footer                                        - ok
-
-
- */
- /* LAPTOP-VERSION */
+/* GEMENSAMMA FÖRHÅLLNINGSREGLER FÖR MOBIL- OCH LAPTOP-VERSION */
  html{
    margin: 0px;
    padding: 0px;
@@ -42,9 +41,69 @@ MOBIL
  * {
    box-sizing: border-box;
  }
+      /* START BILDER */
+        #pic1, #pic2, #pic3 {
+          width: 100%;
+          height: auto;
+          padding: 15px 6px;
+        }
+        #pic4, #pic5, #pic6 {
+          width: 100%;
+          height: 600px;
+          padding: 15px 6px;
+        }
+        /* SLUT BILDER */
+ h1 {
+  color: #000000;
+  text-decoration: none;
+  font-family: "open-sans", arial, helvetica, sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+ h2 {
+  color: #000000;
+  text-decoration: none;
+  font-family: "open-sans", arial, helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+ h4 {
+  color: #000000;
+  text-decoration: none;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "open-sans", arial, helvetica, sans-serif;
+  margin: 0px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+ h5 {
+  color: #000000;
+  text-decoration: none;
+  font-family: "open-sans", arial, helvetica, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+ p {
+  color: #000000;
+  text-decoration: none;
+  font-family: verdana, georgia, sans-serif;
+  font-size: 16px;
+}
+ ul {
+  list-style-type: none;
+  font-family: verdana, georgia, sans-serif;
+}
+/* SLUT PÅ GEMENSAMMA FÖRHÅLLNINGSREGLER */
 
-/* HEADER */
- .flex-container-header { /* Parent of logo and menu */
+/* START PÅ LAPTOP-VERSION */
+/* START HEADER */
+ .flex-container-header { /* Parent of logo and navigation bar */
    background-color: #ffffff;
    display: flex;
    flex-direction: column;
@@ -57,7 +116,6 @@ MOBIL
    height: auto;
    color: #000000;
    }
-
    .flex-container-header a {
      justify-content: center;
      align-items: center;
@@ -70,8 +128,7 @@ MOBIL
      margin-right: 0px;
      justify-content: center;
    }
-
-/* MENYN: NAVIGATION BAR */
+    /* START PÅ MENYN: NAVIGATION BAR */
      .topnav { /* Child of "flex-container-header" */
      display: flex;
      flex-direction: row;
@@ -85,7 +142,6 @@ MOBIL
      overflow: hidden;
      justify-content: space-around;
      }
-
        .topnav a { /* Style the links inside the navigation bar */
          display: flex;
          flex-wrap: nowrap;
@@ -96,123 +152,61 @@ MOBIL
          text-decoration: none;
          color: #000000;
          font-family: "open-sans", arial, helvetica, sans-serif;
-
          margin: 3px 0px 3px 0px;
-   }
+       }
          .topnav a:hover {  /*Change the color of links on hover*/
            background-color: #F4E4D6;
            padding: 14px 16px;
            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
          }
-
          .topnav a:hover:not(.active) {
            background-color: #F4E4D6;
            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
          }
-
          .topnav a.active { /* Add an active class to highlight the current page */
          background-color: #ffffff;
          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
          }
-
          .topnav a.icon {   /* Hide the link that should open and close the topnav on small screens */
            display: none;
          }
-/* SLUT PÅ HEADER */
-/* SLUT PÅ MENYN: NAVIGATION BAR */
-
-
-/* START BILDER */
- #pic1, #pic2, #pic3, #pic4, #pic5, #pic6 {                      /* Bilder  */
-   width: 100%;
-   height: auto;
-   padding: 15px 6px;
- }
- /* SLUT BILDER */
+/* SLUT PÅ HEADER */ /* SLUT PÅ MENYN: NAVIGATION BAR */
 
 /* START NUDE-BOX */
-   .flex-container-index-body { /* Nude box */
+   .flex-container-index-body { /* Parent */
    width: 100%;
    max-width: 100%;
    height: auto;
-   background-color: #ead8c8; /* #F4E6D6; */
+   background-color: #ead8c8;
    display: flex;
    float: left;
    flex-direction: column;
-
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    color: #000000;
-     padding: 0px 100px 0px 100px;
+   padding: 0px 100px 0px 100px;
  }
-   .flex-container-index-body h1, h2, h5, p {
+   .flex-container-index-body h1, h2, h5 {
      margin: 10px 0px 0px 0px;
    }
-   .flex-container-index-body p { /* Nude box */
+   .flex-container-index-body p {
      margin: 1px 0px 10px 0px;
    }
-
-   .flex-container-index-body h4 { /* Nude box */
+   .flex-container-index-body h4 {
      padding: 5px 0px 5px 0px;
    }
 /* SLUT PÅ NUDE-BOX */
 
-
-/* ALLMÄNNA BESTÄMMELSER */
- h1 {
-   color: #000000;
-   text-decoration: none;
-   font-family: "open-sans", arial, helvetica, sans-serif;
-   font-size: 28px;
-   text-transform: uppercase;
-   font-weight: lighter;
-   letter-spacing: 2px;
-   }
- h2 {
-   color: #000000;
-   text-decoration: none;
-   font-family: "open-sans", arial, helvetica, sans-serif;
-   font-size: 22px;
-   font-weight: lighter;
-   letter-spacing: 2px;
- }
- h4 {
-   color: #000000;
-   text-decoration: none;
-   padding-bottom: 10px;
-   text-transform: uppercase;
-   font-size: 18px;
-   font-family: "open-sans", arial, helvetica, sans-serif;
-   margin: 0px;
-   font-weight: lighter;
-   letter-spacing: 1px;
- }
- h5 {
-   color: #000000;
-   text-decoration: none;
-   font-family: "open-sans", arial, helvetica, sans-serif;
-   font-size: 16px;
-   text-transform: uppercase;
-   letter-spacing: 1px;
- }
- p {
-   color: #000000;
-   text-decoration: none;
-   font-family: "open-sans", arial, helvetica, sans-serif;
-   font-size: 16px;
- }
- /* SLUT PÅ ALLMÄNNA BESTÄMMELSER */
-
 /* BÖRJAN PÅ FOOTER */
    .flex-container-footer { /* PARENT OF "flex-container-footer-h1", "flex-opening-hours" and "flex-parent-column" */
-   width: 100%;
-   max-width: 100%;
-   height: auto;
-   background-color: #ffffff;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   padding: 0px 40px 0px 40px;
- }
+     width: 100%;
+     max-width: 100%;
+     height: auto;
+     background-color: #ffffff;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding: 0px 40px 0px 40px;
+   }
      .flex-container-footer-h1 { /* Child of "flex-container-footer" */
        text-align: left;
        padding: 0px 60px 0px 60px;
@@ -237,7 +231,7 @@ MOBIL
        flex-direction: row;
        padding: 0px 60px 0px 60px;
        height: auto;
-       justify-content: center; /* ??? */
+       justify-content: center;
        width: 100%;
      }
      .flex-opening-hours h4 {
@@ -259,10 +253,10 @@ MOBIL
        padding: 0px;
      }
        .flex-opening-hours-monday, .flex-opening-hours-tuesday, .flex-opening-hours-wednesday, .flex-opening-hours-thursday, .flex-opening-hours-friday {/* Child of "flex-opening-hours" */
-       float: left;
-       width: 20%;
-       padding: 0px;
-       margin: 0px;
+         float: left;
+         width: 20%;
+         padding: 0px;
+         margin: 0px;
        }
    .flex-parent-column { /* Child of "flex-container-footer"; Parent of "button-book-online" and "flex-contacts" */
        flex-direction: column;
@@ -270,35 +264,6 @@ MOBIL
        justify-content: center;
        padding: 0px 60px 0px 60px;
    }
-
-   /* START BUTTON */
-     .button-book-online { /* Child of "flex-parent-column"; includes the button */
-       justify-content: center;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-     }
-     .button { /* ONLINE BOOKING BUTTON; Child of "button-book-online"*/
-       margin: 35px 0px 0px 0px;
-       width: 45%;
-       background-color: #ead8c8; /*#F4E6D6;  Nude */
-       font: "open-sans", arial, helvetica, sans-serif;
-       border: none;
-       color: black;
-       padding: 15px;
-       text-align: center;
-       text-decoration: none;
-       font-size: 16px;
-       border-radius: 8px;
-       display: block;
-       text-transform: uppercase;
-       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Shadow behind button */
-   }
-
-   /*.button a:hover:not(.active) {background-color: #111;}  The HOVER for the menu, be there? Color? */
-
-/* SLUT BUTTON */
-
      .flex-contacts { /* Child of "flex-parent-cloumn" */
        display: flex;
        flex-direction: column;
@@ -317,9 +282,32 @@ MOBIL
      .flex-contacts h5 {
        text-align: center;
      }
-/* SLUT PÅ FOOTER */
+     /* START BUTTON (INCLUDED IN FOOTER)*/
+       .button-book-online { /* Child of "flex-parent-column"; includes the button */
+         justify-content: center;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       }
+       .button { /* ONLINE BOOKING BUTTON; Child of "button-book-online"*/
+         margin: 35px 0px 0px 0px;
+         width: 45%;
+         background-color: #ead8c8;
+         font-family: "open-sans", arial, helvetica, sans-serif;
+         border: none;
+         color: black;
+         padding: 15px;
+         text-align: center;
+         text-decoration: none;
+         font-size: 16px;
+         border-radius: 8px;
+         display: block;
+         text-transform: uppercase;
+         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Shadow behind button */
+     }
+     /* SLUT BUTTON */ /* SLUT PÅ FOOTER */
 
-/* Start Huvudbox på sidan PRISER */
+/* START HUVUDBOX PÅ SIDAN "PRISER" */
 .boxForBoxPrices { /* PARENT OF "sidenav" */
 background-color: #ffffff;
 margin: 10px 0px 10px 0px;
@@ -331,21 +319,20 @@ height: auto;
 align-items: center;
 justify-content: center;
 }
-
-/* BÖRJAN PÅ MENYN PÅ SIDAN PRISER */
-.sidenav { /* CHILD of "boxForBoxPrices" */
-  background-color: #F4E6D6;
-  width: 85%;
-  height: auto;
-  text-align: center;
-  justify-content: space-around;
-  display: flex;
-  flex-direction: row;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  margin: 5px;
-}
+  /* START PÅ MENYN PÅ SIDAN "PRISER" */
+  .sidenav { /* CHILD of "boxForBoxPrices" */
+    background-color: #F4E6D6;
+    width: 85%;
+    height: auto;
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: 5px;
+  }
     .sidenav a {
-      font: "open-sans", arial, helvetica, sans-serif;
+      font-family: "open-sans", arial, helvetica, sans-serif;
       font-size: 1em;
       color: black;
       padding: 14px 16px;
@@ -357,248 +344,109 @@ justify-content: center;
       background-color: #ead8c8;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
-/* SLUT PÅ MENYN PÅ SIDAN PRISER */
+    /* SLUT PÅ MENYN PÅ SIDAN "PRISER" */
 
-/* BÖRJAN PÅ RANDIG INFORMATION */
-    .klippning {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      background-color: #ead8c8; /* #F4E6D6 */
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-      height: auto;
-      width: 85%;
-      margin: 0px 0px 10px 0px;
-    }
-      .klippning h3 {
-        text-transform: uppercase;
-        font-size: 2em;
-        font-style: "open-sans", arial, helvetica, sans-serif;
-        font-weight: lighter;
-        letter-spacing: 2px;
-        margin: 10px 0px;
-      }
-      .klippning h4 {
-        font-weight: bold;
-      }
-      .klippning h5 {
-        font-weight: lighter;
-      }
-      .klippning h6 {
-        font-weight: lighter;
-        margin: 2px;
-      }
-      .klippning ul {
-        padding: 3px 3px 3px 40px;
-      }
-      .klippningLeft {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        text-align: left;
-        padding: 14px 17px;
-        width: 45%;
-      }
-      .klippningRight {
-        display: flex;
-        justify-content: flex-start;
-        text-align: left;
-        height: auto;
-        width: 600px;
-        padding: 102px 16px 14px 16px;
-      }
-
-/* BÖRJAN PÅ RAND 2 */
-.coloring {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  background-color: #F4E6D6; /*  #ead8c8 */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  height: auto;
-  width: 85%;
-  margin: 0px 0px 10px 0px;
-}
-  .coloring h3 {
-    text-transform: uppercase;
-    font-size: 2em;
-    font-style: "open-sans", arial, helvetica, sans-serif;
-    font-weight: lighter;
-    letter-spacing: 2px;
-    margin: 10px 0px;
-  }
-  .coloring h4 {
-    font-weight: bold;
-  }
-  .coloring h5 {
-    font-weight: lighter;
-  }
-  .coloring h6 {
-    font-weight: lighter;
-    margin: 2px;
-  }
-  .coloring ul {
-    padding: 3px 3px 3px 40px;
-  }
-  .coloringLeft {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
-    padding: 14px 17px;
-    width: 45%;
-  }
-  .coloringRight {
-    display: flex;
-    justify-content: flex-start;
-    text-align: left;
-    height: auto;
-    width: auto;
-    padding: 102px 16px 14px 16px;
-  }
-
-/* BÖRJAN PÅ RAND 3 */
-.behandling {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  background-color: #ead8c8; /* #F4E6D6 */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  height: auto;
-  width: 85%;
-  margin: 0px 0px 10px 0px;
-}
-  .behandling h3 {
-    text-transform: uppercase;
-    font-size: 2em;
-    font-style: "open-sans", arial, helvetica, sans-serif;
-    font-weight: lighter;
-    letter-spacing: 2px;
-    margin: 10px 0px;
-  }
-  .behandling h4 {
-    font-weight: bold;
-  }
-  .behandling h5 {
-    font-weight: lighter;
-  }
-  .behandling h6 {
-    font-weight: lighter;
-    margin: 2px;
-  }
-  .behandling ul {
-    padding: 3px 3px 3px 40px;
-  }
-  .behandlingLeft {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
-    padding: 14px 17px;
-    width: 45%;
-  }
-  .behandlingRight {
-    display: flex;
-    justify-content: flex-start;
-    text-align: left;
-    height: auto;
-    width: auto;
-    padding: 102px 16px 14px 16px;
-  }
-  /* BÖRJAN PÅ RAND 4 */
-  .hairtalk {
+/* BÖRJAN PÅ RANDIGA TEXTBLOCK MED INFORMATION PÅ SIDAN "PRISER" */
+    /* RAND 1 OCH 3 */
+    .klippning, .behandling {
+        background-color: #ead8c8;
+    } /* SLUT PÅ RAND 1 OCH 3 */
+    /* BÖRJAN PÅ RAND 2 OCH 4 */
+    .coloring, .hairtalk {
+        background-color: #F4E6D6;
+    } /* SLUT PÅ RAND 2 OCH 4 */
+  /* GEMENSAMMA REGLER FÖR ALLA RÄNDER I RANDIGA TEXTBLOCK */
+  .klippning, .behandling, .coloring, .hairtalk {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: #F4E6D6; /*  #ead8c8 */
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     height: auto;
     width: 85%;
     margin: 0px 0px 10px 0px;
   }
-    .hairtalk h3 {
-      text-transform: uppercase;
-      font-size: 2em;
-      font-style: "open-sans", arial, helvetica, sans-serif;
-      font-weight: lighter;
-      letter-spacing: 2px;
-      margin: 10px 0px;
-    }
-    .hairtalk h4 {
-      font-weight: bold;
-    }
-    .hairtalk h5 {
-      font-weight: lighter;
-    }
-    .hairtalk h6 {
-      font-weight: lighter;
-      margin: 2px;
-    }
-    .hairtalk ul {
-      padding: 3px 3px 3px 40px;
-    }
-    .hairtalkLeft {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      text-align: left;
-      padding: 14px 17px;
-      width: 45%;
-    }
-    .hairtalkRight {
-      display: flex;
-      justify-content: flex-start;
-      text-align: left;
-      height: auto;
-      width: auto;
-      padding: 102px 16px 14px 16px;
-    }
-/* SLUT PÅ RANDIG INFORMATION */
-/* SLUT PÅ HUVUDBOXEN PÅ SIDAN PRISER */
+  .klippning h3, .behandling h3, .coloring h3, .hairtalk h3 {
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: "open-sans", arial, helvetica, sans-serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    margin: 10px 0px;
+  }
+  .klippning h4, .behandling h4, .coloring h4, .hairtalk h4 {
+    font-weight: bold;
+  }
+  .klippning h5, .behandling h5, .coloring h5, .hairtalk h5 {
+    font-weight: lighter;
+  }
+  .klippning h6, .behandling h6, .coloring h6, .hairtalk h6 {
+    font-weight: lighter;
+    margin: 2px;
+  }
+  .klippning ul, .behandling ul, .coloring ul, .hairtalk ul {
+    padding: 3px 3px 3px 40px;
+  }
+  .klippningRight, .behandlingRight, .coloringRight, .hairtalkRight {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    height: auto;
+    width: auto;
+    padding: 102px 16px 14px 16px;
+  }
+  .klippningLeft, .behandlingLeft, .coloringLeft, .hairtalkLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 14px 17px;
+    width: 45%;
+  }
+  /* SLUT PÅ RANDIG INFORMATION */
+/* SLUT PÅ HUVUDBOXEN PÅ SIDAN "PRISER" */
 
 /* START PÅ HUVUDBOX PÅ SIDAN "AKTUELLT" */
-.ljusRandAktuellt { /* Rand 2 */
+/* GEMENSAMMA REGLER I HUVUBOXEN */
+.randAktuelltHeadline, .ljusRandAktuellt, .darkRandAktuellt, .randAktuelltLeft {
   display: flex;
   flex-direction: column;
+}
+.ljusRandAktuellt, .darkRandAktuellt {
   justify-content: flex-start;
-  background-color: #F4E6D6; /*  #ead8c8 */
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   height: auto;
   width: 85%;
   margin: 0px 0px 10px 0px;
   padding: 14px 16px;
 }
-.randAktuelltHeadline {
-  display: flex;
-  flex-direction: column;
-}
-.darkRandAktuellt { /* Rand 1 och 3 */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: #ead8c8; /* #F4E6D6 */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  height: auto;
-  width: 85%;
-  margin: 0px 0px 10px 0px;
-  padding: 14px 16px;
-}
-.randAktuelltLeft { /* Den vänstra kolumnen i ränderna på sidan "Aktuellt" */
-  display: flex;
-  flex-direction: column;
-  float: left;
-  width: 75%;
-}
-.randAktuelltRight { /* Den högra kolumnen i ränderna på sidan "Aktuellt" */
-  display: flex;
-  float: right;
-  width: 25%;
-  height: auto;
-}
+/* SLUT På GEMENSAMMA REGLER */
+
+/* RAND 2 */
+.ljusRandAktuellt {
+  background-color: #F4E6D6;
+  } /* SLUT PÅ RAND 2 */
+/* RAND 1 OCH 3 */
+.darkRandAktuellt {
+  background-color: #ead8c8;
+  } /* SLUT PÅ RAND 1 OCH 3 */
+
+    /* Den vänstra kolumnen i ränderna på sidan "Aktuellt" */
+    .randAktuelltLeft {
+      float: left;
+      width: 75%;
+    }
+    /* Den högra kolumnen i ränderna på sidan "Aktuellt" */
+    .randAktuelltRight {
+      display: flex;
+      float: right;
+      width: 25%;
+      height: auto;
+    }
+/* ÖVRIGT I HUVUBOXEN */
 .darkRandAktuellt h3, .ljusRandAktuellt h3 {
   text-transform: uppercase;
   font-size: 2em;
-  font-style: "open-sans", arial, helvetica, sans-serif;
+  font-family: "open-sans", arial, helvetica, sans-serif;
   font-weight: lighter;
   letter-spacing: 2px;
   margin: 10px 0px;
@@ -610,40 +458,36 @@ width: 100%;
 }
 .randAktuelltChild {
   width: 100%;
-}
-/* SLUT PÅ HUVUDBOX PÅ SIDAN "AKTUELLT" */
+} /* SLUT PÅ HUVUDBOX PÅ SIDAN "AKTUELLT" */
 
 /* START PÅ BILDGALLERI */
 .bildgalleri {
 width: 33.33%;
-height: auto;
 float: left;
-}
-/* SLUT PÅ BILDGALLERI */
+} /* SLUT PÅ BILDGALLERI */
 
-/* MOBILE */
+/* MOBILE-VERSION */
 @media only screen and (max-width: 600px) { /* If the screen is smaller than 600px*/
-      .topnav a:not(:first-child) {display: none;}
-  #logo { /* Mobile version of the logo */
 
-}
+/* START MOBIL-ÄNDRINGAR HEADER */
+.topnav a:not(:first-child) {display: none;}
 
 .topnav { /* Child of "flex-container-header" */
 display: block;
 padding: 0px;
 }
-  .topnav a { /* Style the links inside the navigation bar */
+  .topnav a {
     width: auto;
     margin: 3px 0px 3px 13px;
     color: #000000;
   }
-    .topnav a:hover { /* Change the color of links on hover */
+    .topnav a:hover {
       margin-right: 8px;
     }
-    .topnav a.active { /* Add an active class to highlight the current page */
+    .topnav a.active {
       margin-right: 8px;
     }
-    .topnav a.icon {   /* Hides all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+    .topnav a.icon {
       float: right;
       display: block;
       margin: 3px 13px 5px 0px;
@@ -651,11 +495,7 @@ padding: 0px;
       width: auto;
       background-color: #F4E4D6;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
     }
-
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
       .topnav.responsive {position: relative;}
       .topnav.responsive a.icon {
         position: absolute;
@@ -667,15 +507,13 @@ padding: 0px;
         display: block;
         text-align: left;
       }
+
+/* MOBIL-ÄNDRINGAR NAVIGATION BAR PÅ SIDAN "PRICES" */
 .sidenav {   /* To hide the navigation bar for the side "prices" */
   display: none;
 }
 
-
-#pic1 {
-}
-
-/* SIDAN AKTUELLT */
+/* MOBIL-ÄNDRINGAR PÅ SIDAN "AKTUELLT" */
 .randAktuelltContainer { /* Box i boxen, CHILD to "ljusRandAktuellt", PARENT to "randAktuelltLeft" and "randAktuelltRight" */
 display: flex;
 flex-direction: column;
@@ -687,29 +525,22 @@ width: 100%;
 .randAktuelltRight { /* Den högra kolumnen i ränderna på sidan "Aktuellt" */
   float: left;
   width: 100%;
-}
-/* SLUT PÅ SIDAN AKTUELLT */
+} /* SLUT PÅ SIDAN AKTUELLT */
 
-.flex-container-index-body { /* Nude box */
+/* START MOBIL-ÄNDRINGAR FÖR NUDE BOX PÅ SIDAN "INDEX" */
+.flex-container-index-body {
   padding: 0px 40px 0px 40px;
 }
-  .flex-container-index-body h1, h2, h5, p {
-  }
   .flex-container-index-body p {
     margin: 10px 0px 20px 0px;
   }
-  .flex-container-index-body h4 { /* Nude box */
-  }
 
-/* START PÅ BILDGALLERI */
+/* START PÅ MOBIL-ÄNDRINGAR FÖR BILDGALLERI */
   .bildgalleri {
   width: 100%;
-  }
-/* SLUT PÅ BILDGALLERI */
+  } /* SLUT PÅ BILDGALLERI */
 
-
-
-
+/* START MOBIL-ÄNDRINGAR FOOTER */
 .flex-container-footer { /* Parent of h1 and "flex-opening-hours" */
 width: 100%;
 padding: 0px;
@@ -720,39 +551,26 @@ justify-content: center;
   padding: 0px;
   text-align: center;
   }
-
   .flex-opening-hours { /* Child 2 of "flex-container-footer" */
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 0px;
   }
-
   .flex-opening-hours h5 {
     padding: 5px 0px 0px 0px;
-  }
-  .flex-opening-hours p {
   }
     .flex-opening-hours-monday, .flex-opening-hours-tuesday, .flex-opening-hours-wednesday, .flex-opening-hours-thursday, .flex-opening-hours-friday {/* Child of "flex-opening-hours" */
     width: 100%;
     }
-
   .flex-parent-column { /* PARENT of button and flex-contacs */
     padding: 0px;
   }
-  .button-book-online {
-    }
-
   .button { /* ONLINE BOOKING BUTTON: child 1 of "flex-contact-us"*/
       margin: 15px 0px 0px 0px;
       width: 80%;
       padding: 15px;
   }
-
-    .flex-contacts { /* Child of "flex-container-footer" */
-    /*margin-bottom: 20px;  ??? */
-
-    }
     .flex-contacts p {
       padding: 0px;
       justify-content: center;
@@ -760,9 +578,4 @@ justify-content: center;
       text-align: center;
     }
 
-
-
-
-
-
-  }
+}
